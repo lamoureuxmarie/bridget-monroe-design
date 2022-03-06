@@ -51,10 +51,14 @@
     transition: transform .5s ease;
 }
 
-.nav-link:hover::after{
-    transform: scaleX(1);
+/*Apply styles on scroll*/
+
+.scrolling-active{
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
 }
 
+/*End styles on scroll*/
 
 /* --- End styling Navbar ---*/
 

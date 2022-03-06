@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div class="navbar">
+    <header class="navbar" id="navbar">
         <nav class="nav">
             <a href="index.html" class="navbar-logo">BRIDGET MONROE</a>
             <ul class="nav-list">
@@ -30,7 +30,7 @@
                 </li>
             </ul>
         </nav>
-    </div>
+    </header>
 
  
         <div class="header">
@@ -50,6 +50,14 @@
                 This is just some radom text This is just some radom text This is just some radom text This is just some radom text This is just some radom text This is just some radom text 
             </p>
     </section>
+
+<script>
+    window.addEventListener('scroll', function () {
+        let header = document.querySelector('header');
+
+        header.classList.toggle('scrolling-active', window.scrollY > 0);
+    })
+</script>
  
 
 </body>
