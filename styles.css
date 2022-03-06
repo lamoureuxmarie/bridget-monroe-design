@@ -17,6 +17,7 @@
     justify-content: space-between;
     border-bottom: 2px solid rgba(255,255,255,.05);
     transition: height .5s ease;
+    flex-wrap: wrap;
 }
 
 .nav a{
@@ -58,7 +59,30 @@
     box-shadow: 0 3px 1rem rgba(0,0,0,.1);
 }
 
+.scrolling-active .nav a{
+    color: #313131;
+}
+
+.scrolling-active .nav{
+    height: 4.5rem;
+}
 /*End styles on scroll*/
+
+/*Responsive nav*/
+
+.hamburger {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+/*End esponsive nav*/
 
 /* --- End styling Navbar ---*/
 
@@ -90,4 +114,23 @@ section {
     background: white;
     transform: translateZ(0);
     padding: 10px 0;
+  }
+
+
+  @media screen and (max-width: 767px) {
+      .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #FFF;
+        text-align: right;
+      }
+
+      .nav-list.show {
+        display: flex;
+    }
+
+      .hamburger {
+          display: block;
+      }
   }

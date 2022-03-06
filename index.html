@@ -12,7 +12,8 @@
     <header class="navbar" id="navbar">
         <nav class="nav">
             <a href="index.html" class="navbar-logo">BRIDGET MONROE</a>
-            <ul class="nav-list">
+            <button class="hamburger" id="hamburger">🍔</button>
+            <ul class="nav-list" id="nav-list">
                 <li>
                     <a href="index.html" class="nav-link">Home</a>
                 </li>
@@ -52,6 +53,15 @@
     </section>
 
 <script>
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('nav-list');
+
+    hamburger.addEventListener('click', () => {
+        navList.classList.toggle('show');
+    });
+
+
+
     window.addEventListener('scroll', function () {
         let header = document.querySelector('header');
 
