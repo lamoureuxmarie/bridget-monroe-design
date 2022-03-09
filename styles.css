@@ -1,6 +1,6 @@
 /* --- Start styling Navbar ---*/
 
-.navbar{
+.navigation-bar{
     width: 100%;
     position: fixed;
     top: 0;
@@ -55,12 +55,13 @@
 /*Apply styles on scroll*/
 
 .scrolling-active{
-    background-color: #fff;
+    background-color: #4121fb;
+    color: #fff;
     box-shadow: 0 3px 1rem rgba(0,0,0,.1);
 }
 
 .scrolling-active .nav a{
-    color: #313131;
+    color: #fff;
 }
 
 .scrolling-active .nav{
@@ -100,20 +101,37 @@
     height: 100%;
     position: absolute;
     background-image: url(/images/bridgethollinscostumedesign1.jpg);
-    filter: hue-rotate(280deg);
+    filter: hue-rotate(300deg);
     background-size: cover;
     background-attachment: fixed;
 }
 
 .header-inside {
     position: relative;
+    min-height: 75vh;
 }
 
+.logo-header {
+    position: fixed;
+    z-index: 0;
+    top: 8rem;
+    left: 20rem;
+    text-align: center;
+}
+
+
 section {
-    min-height: 200vh;
-    background: white;
+    background-color: #f9e9f9;
     transform: translateZ(0);
     padding: 10px 0;
+  }
+
+  .image-menu {
+      margin: 0 auto;
+  }
+
+  .image-menu img {
+      max-width: 400px;
   }
 
 
@@ -128,6 +146,8 @@ section {
 
       .nav-list.show {
         display: flex;
+        border: 1px solid #dadde1;
+        border-radius: 4px;
     }
 
       .hamburger {
