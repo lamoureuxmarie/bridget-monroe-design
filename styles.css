@@ -55,7 +55,7 @@
 /*Apply styles on scroll*/
 
 .scrolling-active{
-    background-color: #4121fb;
+    background-color: #a33472;
     color: #fff;
     box-shadow: 0 3px 1rem rgba(0,0,0,.1);
 }
@@ -125,6 +125,13 @@ section {
     transform: translateZ(0);
     padding: 10px 0;
   }
+
+.blog-articles {
+    background-color: #47a7a5;
+    color: #fff;
+    padding: 70px 0 !important;
+    width: 100%;
+}
 
   .image-menu {
       margin: 0 auto;
