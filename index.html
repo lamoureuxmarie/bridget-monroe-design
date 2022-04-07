@@ -53,9 +53,9 @@
     </section>
 
     <div class="title-container">
-    <h3>Projects</h3>
+    <h2 class="fade-in">Projects</h2>
     <div class="shape">
-    <svg id="sw-js-blob-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" version="1.1">                    
+    <svg id="sw-js-blob-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" version="1.1">                    
         <defs>                         
             <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">                            
                 <stop id="stop1" stop-color="rgba(150, 255, 156, 1)" offset="0%"></stop>                            
@@ -72,10 +72,36 @@
  
 
 <script>
+    //Navbar appear on scroll
     window.addEventListener('scroll', function () {
         let header = document.querySelector('header');
 
         header.classList.toggle('scrolling-active', window.scrollY > 0);
+    })
+
+    //Header fade in on scroll
+    const fadeIn = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+        threshold: 1
+    };
+
+    const appearOnScroll = new IntersectionObserver
+    (function(
+        entries, 
+        appearOnScroll
+        ) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                }
+            })
+        }, 
+    appearOptions);
+
+    fadeIn.forEach(fadeIn => {
+        appearOnScroll.observe(fadeIn);
     })
 </script>
  
