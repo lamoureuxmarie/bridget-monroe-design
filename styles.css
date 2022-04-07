@@ -15,29 +15,16 @@
     z-index: 1000;
 }
 
-.nav{
-    width: 100%;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navbar-custom{
+    height: 5rem !important;
     border-bottom: 2px solid rgba(255,255,255,.05);
     transition: height .5s ease;
-    flex-wrap: wrap;
 }
 
-.nav a{
+.navbar-custom a{
     font-family: Helvetica, sans-serif;
     text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-}
-
-.nav-list{
-    list-style: none;
-    display: flex;
-    margin-right: auto;
-    margin-left: 4rem;
+    color: #fff !important;
 }
 
 .nav-link{
@@ -66,12 +53,12 @@
     box-shadow: 0 3px 1rem rgba(0,0,0,.1);
 }
 
-.scrolling-active .nav a{
-    color: #181818;
+.scrolling-active .navbar-custom a{
+    color: #181818 !important;
 }
 
-.scrolling-active .nav{
-    height: 3.5rem;
+.scrolling-active .navbar-custom{
+    height: 3.5rem !important;
 }
 /*End styles on scroll*/
 
