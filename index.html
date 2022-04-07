@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -56,20 +59,57 @@
         </h1>
     </section>
 
-    <div class="title-container">
+    <div class="title-container projects-title-container">
     <h2 class="fade-in">Projects</h2>
-    <div class="shape">
-    <svg id="sw-js-blob-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" version="1.1">                    
-        <defs>                         
-            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">                            
-                <stop id="stop1" stop-color="rgba(150, 255, 156, 1)" offset="0%"></stop>                            
-                <stop id="stop2" stop-color="rgba(50, 236, 56, 1)" offset="100%"></stop>                        
-            </linearGradient>                    
-        </defs>                
-        <path fill="url(#sw-gradient)" d="M20.5,-21.7C27.4,-13.5,34.6,-6.8,34.6,0C34.6,6.8,27.6,13.7,20.6,17.2C13.7,20.6,6.8,20.8,-0.3,21C-7.4,21.3,-14.7,21.7,-19.7,18.2C-24.8,14.7,-27.5,7.4,-29.4,-1.9C-31.3,-11.1,-32.4,-22.3,-27.3,-30.5C-22.3,-38.7,-11.1,-44,-2.2,-41.8C6.8,-39.6,13.5,-29.9,20.5,-21.7Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style="transition: all 0.3s ease 0s;"></path>              
-    </svg>
+    </div>
+    <div class="blob"></div>
+
+   <div class="container projects-container">
+       <div class="row">
+           <div class="col-6">
+            Work In Progress For Juan Migama Creative Director and Clown for Zirkus Mond Character of “Party Guy”.
+            Needs to be suitable for acrobatics References to street wear, music festivals and DIY Wagon Platz aesthetic. 
+            <br/>
+            Stretch cotton shirt and jeans stitched into a jumpsuit with added zippers and trims
+            Hand-painted with acrylic paint and fabric medium.
+            Each colour represents a member of the ensemble cast. Applied as if the character had painted the garment himself in a “loose” and “chaotic” style.        
+           </div>
+           <div class="col-6">
+            Abstract Harlequin. 
+            <br/>
+            Punk Vest for a Traveller
+            <br/>
+            No studs possible due to high impact stunts - focused on embroidery instead.
+            To imply wear and tear there is false darning sections and edges left raw.
+            <br/>
+            Small embroideries to represent flash tattoos Juan has collected along his journeys, the final designs will be collaborative.
+            Macrame belt and lots of pockets for props.     
+           </div>
+           <div class="row projects-img-container mt-5">
+               <div class="col-3">
+                <div class="project-img-1 img-animated img-animated-1"></div>
+               </div>
+               <div class="col-3">
+                <div class="project-img-2 img-animated img-animated-2"></div>
+               </div>
+               <div class="col-3">
+                <div class="project-img-3 img-animated img-animated-3"></div>
+               </div>
+               <div class="col-3">
+                <div class="project-img-4 img-animated img-animated-4"></div>
+               </div>
+           </div>
+       </div>
+       <div class="d-flex justify-content-center">
+        <button class="mt-5 button-primary text-center">See more projects</button>
+       </div>
    </div>
+
+   <div class="title-container">
+    <h2 class="fade-in">About</h2>
    </div>
+   <div class="blob-2"></div>
+      
 
 
 
@@ -83,7 +123,7 @@
         header.classList.toggle('scrolling-active', window.scrollY > 0);
     })
 
-    //Header fade in on scroll
+    //Text fade in on scroll
     const fadeIn = document.querySelectorAll('.fade-in');
     const appearOptions = {
         threshold: 1
@@ -106,6 +146,32 @@
 
     fadeIn.forEach(fadeIn => {
         appearOnScroll.observe(fadeIn);
+    })
+
+
+    //Img fade in on scroll
+    const imgFadeIn = document.querySelectorAll('.img-animated');
+    const imgAppearOptions = {
+        threshold: 1
+    };
+
+    const imgAppearOnScroll = new IntersectionObserver
+    (function(
+        entries, 
+        appearOnScroll
+        ) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                }
+            })
+        }, 
+    imgAppearOptions);
+
+    imgFadeIn.forEach(fadeIn => {
+        imgAppearOnScroll.observe(fadeIn);
     })
 </script>
  
