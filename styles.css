@@ -1,7 +1,10 @@
 * {
     margin: 0;
     padding: 0;
-    overflow-x:hidden;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 /* --- Start styling Navbar ---*/
@@ -62,20 +65,42 @@
 }
 /*End styles on scroll*/
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Libre Baskerville', serif;
     font-weight: 700 !important;
 }
 
+.about-section h2 {
+    position: relative;
+    left: 20%;
+    top: 12rem;
+}
+
+.about-section h3 {
+    font-style: italic;
+    font-size: 3rem;
+}
+
+.about-section .text-container {
+    margin-top: 8rem;
+    padding-right: 8rem !important;
+}
+
+.about-section .button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
 
 .bg-black {
     padding-top: 120px;
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .bg-black h1 {
@@ -89,7 +114,7 @@ h1, h2 {
 
 .blob,
 .blob-2 { 
-    z-index: -10;
+    z-index: -100;
     position: relative;
     width: 450px;
     height: 390px;
@@ -110,7 +135,9 @@ h1, h2 {
   
 
 button {
-    padding: 10px 15px;
+    font-family: 'Roboto', sans-serif !important;
+    text-transform: uppercase !important;
+    padding: 20px 25px;
     border: none;
 }
 
@@ -119,7 +146,23 @@ button {
     color: #fff;
 }
 
+.button-primary:hover {
+    background-color: #212121;
+    color: #fff;
+}
+
+.button-secondary {
+    background-color: #e3e5e9;
+    color: #181818;
+}
+
+.button-secondary:hover {
+    background-color: #dadde1;
+    color: #181818;
+}
+
 .fade-in {
+    overflow-y: hidden;
     opacity: 0;
     transition: opacity 0.5s ease-in;
   }
@@ -142,16 +185,13 @@ button {
   }
 
   .para-1 {
-    background-image: url(https://images.unsplash.com/photo-1502217625004-89c03571bcca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+    /*background-image: url(https://images.unsplash.com/photo-1502217625004-89c03571bcca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);*/
+    background-image: url(/images/drag-costume.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 500px;
     background-attachment: fixed;
-  }
-
-  .projects-container {
-    font-family: 'Source Code Pro', monospace;
   }
 
 
@@ -195,6 +235,10 @@ button {
 .text-color {
     color: #32ec38;
 }
+
+.text-container {
+    font-family: 'Source Code Pro', monospace;
+  }
 
 /* --- End styling Navbar ---*/
 
