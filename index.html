@@ -66,7 +66,7 @@
 
    <section class="container projects-container text-container">
        <div class="row">
-           <div class="col-6">
+           <div class="col-6 slide-left fade-in">
             Work In Progress For Juan Migama Creative Director and Clown for Zirkus Mond Character of “Party Guy”.
             Needs to be suitable for acrobatics References to street wear, music festivals and DIY Wagon Platz aesthetic. 
             <br/>
@@ -74,7 +74,7 @@
             Hand-painted with acrylic paint and fabric medium.
             Each colour represents a member of the ensemble cast. Applied as if the character had painted the garment himself in a “loose” and “chaotic” style.        
            </div>
-           <div class="col-6">
+           <div class="col-6 slide-right fade-in">
             Abstract Harlequin. 
             <br/>
             Punk Vest for a Traveller
@@ -117,12 +117,14 @@
        </div>
        <div class="col-md-6">
         <div class="container text-container">
-            <h3>I am a creative costumier</h3>
+            <h3 class="slide-left fade-in">I am a creative costumier</h3>
+            <div class="slide-right fade-in">
             with a strong background installing new productions. 
             <br />My work is detail-oriented and I am qualified to take positions in manufacturing, maintenance, dressing, art department or design. 
             <br />I am comfortable in roles ranging from assistant to supervisor within any department in a production. 
             <br />I have experience in theatre, opera, dance, television, film and performance art. 
             <br />Beyond garments, I am skilled with production management, sculpture, millinery, surface design and various traditional textile techniques.
+           </div>
            </div>
        </div>
    </div>
@@ -200,6 +202,55 @@
     fadeIn.forEach(fadeIn => {
         appearOnScroll.observe(fadeIn);
     })
+
+    //Slide in on scroll
+
+    const txtAppearOptions = {
+        threshold: 1
+    };
+
+    const slideLeft = document.querySelectorAll('.slide-left');
+
+    const slideLeftOnScroll = new IntersectionObserver
+    (function(
+        entries,
+        slideLeftOnScroll
+    ) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add('slideLeft');
+            }
+        })
+    },
+        txtAppearOptions);
+    
+        slideLeft.forEach(slideLeft => {
+        slideLeftOnScroll.observe(slideLeft);
+    })
+
+    const slideRight = document.querySelectorAll('.slide-right');
+
+    const slideRightOnScroll = new IntersectionObserver
+    (function(
+        entries,
+        slideRightOnScroll
+    ) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add('slideRight');
+            }
+        })
+    },
+        txtAppearOptions);
+    
+        slideRight.forEach(slideRight => {
+        slideRightOnScroll.observe(slideRight);
+    })
+
 
 
     //Img fade in on scroll
