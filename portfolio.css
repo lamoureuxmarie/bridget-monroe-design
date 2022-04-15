@@ -1,3 +1,29 @@
+.collaborations {
+    padding-top: 120px;
+    height: 100vh;
+}
+
+
+.galerie-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #181818;
+}
+
+.galerie-section img {
+    width: 100%;
+    opacity: 1;
+    height: auto;
+    transition: 0.4s ease-in-out;
+}
+
+.galerie-section .img-container:focus,
+.galerie-section .img-container:hover {
+    transform: scale(1.5);
+    z-index: 1;
+    transition: transform ease-in 0.4s;
+}
+
 .img-container {
     position: relative;
 }
@@ -20,23 +46,4 @@
     color: #fff;
     padding: 10px 25px;
     text-align: center;
-}
-
-.portfolio-section {
-    padding-top: 120px;
-    background-color: #181818;
-}
-
-.portfolio-section img {
-    width: 100%;
-    opacity: 1;
-    height: auto;
-    transition: 0.4s ease-in-out;
-}
-
-.portfolio-section .img-container:focus,
-.portfolio-section .img-container:hover {
-    transform: scale(1.5);
-    z-index: 1;
-    transition: transform ease-in 0.4s;
 }

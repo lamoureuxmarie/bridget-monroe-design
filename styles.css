@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none !important
+}
+
 body {
     overflow-x: hidden;
 }
@@ -48,7 +52,7 @@ body {
     transition: transform .5s ease;
 }
 
-/*Apply styles on scroll*/
+/*Apply navbar styles on scroll*/
 
 .scrolling-active{
     background-color: #32ec38;
@@ -63,17 +67,23 @@ body {
 .scrolling-active .navbar-custom{
     height: 3.5rem !important;
 }
-/*End styles on scroll*/
+/*End navbar styles on scroll*/
 
 h1, h2, h3 {
     font-family: 'Libre Baskerville', serif;
     font-weight: 700 !important;
 }
 
-.about-section h2 {
+.about-section .title-container {
     position: relative;
     left: 20%;
     top: 12rem;
+}
+
+.about-section .title-container h2 {
+    position: absolute;
+    top: 10%;
+    left: -3rem;
 }
 
 .about-section h3 {
@@ -169,21 +179,8 @@ button {
     transition: opacity 0.5s ease-in;
   }
 
-.fade-in.is-visible,
-.img-animated.is-visible {
+.fade-in.is-visible {
       opacity: 1;
-  }
-
-  .img-animated-1,
-  .img-animated-4 {
-    opacity: 0;
-    transition: opacity 0.3s ease-in;
-  }
-
-  .img-animated-2,
-  .img-animated-3 {
-    opacity: 0;
-    transition: opacity 0.4s ease-in;
   }
 
   .para-1 {
@@ -196,37 +193,21 @@ button {
     background-attachment: fixed;
   }
 
-
-  .projects-img-container .project-img-1, 
-  .project-img-2, 
-  .project-img-3, 
-  .project-img-4 {
-    height: 400px;
-    width: auto;
-    background-size: cover;
-    background-position: center;
+.projects-img-container img {
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
-.projects-img-container .project-img-1 {
-    background-image: url(/images/party-guy-1.png);
+.projects-container .title-container {
+    position: relative;
+    left: -20%;
+    top: 0;
 }
 
-.projects-img-container .project-img-2 {
-    background-image: url(/images/party-guy-2.png);
-}
-
-.projects-img-container .project-img-3 {
-    background-image: url(/images/party-guy-3.png);
-}
-
-.projects-img-container .project-img-4 {
-    background-image: url(/images/party-guy-4.png);
-}
-
-.projects-title-container h2{
+.projects-container .title-container h2{
     position: absolute;
-    left: 30%;
-    top: 65rem;
+    left: 60%;
+    top: 50%;
 }
 
 .text-color {
@@ -235,7 +216,7 @@ button {
 
 .text-container {
     font-family: 'Source Code Pro', monospace;
-  }
+}
 
 .title-container h2 {
     font-size: 5.5rem;

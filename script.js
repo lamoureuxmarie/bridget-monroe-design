@@ -6,7 +6,7 @@
         header.classList.toggle('scrolling-active', window.scrollY > 0);
     })
 
-    //Text fade in on scroll
+    //Fade in on scroll
     const fadeIn = document.querySelectorAll('.fade-in');
     const appearOptions = {
         threshold: 1
@@ -80,28 +80,3 @@
     })
 
 
-
-    //Img fade in on scroll
-    const imgFadeIn = document.querySelectorAll('.img-animated');
-    const imgAppearOptions = {
-        threshold: 1
-    };
-
-    const imgAppearOnScroll = new IntersectionObserver
-    (function(
-        entries, 
-        appearOnScroll
-        ) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
-                    entry.target.classList.add('is-visible');
-                }
-            })
-        }, 
-    imgAppearOptions);
-
-    imgFadeIn.forEach(fadeIn => {
-        imgAppearOnScroll.observe(fadeIn);
-    })
