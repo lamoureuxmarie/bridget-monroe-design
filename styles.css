@@ -109,6 +109,7 @@ h1, h2, h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
 }
 
 .bg-black h1 {
@@ -183,7 +184,7 @@ button {
       opacity: 1;
   }
 
-  .para-1 {
+.para-1 {
     /*background-image: url(https://images.unsplash.com/photo-1502217625004-89c03571bcca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);*/
     background-image: url(/images/drag-costume.jpg);
     background-size: cover;
