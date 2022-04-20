@@ -31,6 +31,13 @@ p {
     z-index: 1000;
 }
 
+.navbar-brand em {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
 .navbar-custom{
     height: 5rem !important;
     border-bottom: 2px solid rgba(255,255,255,.05);
@@ -41,6 +48,10 @@ p {
     font-family: Helvetica, sans-serif;
     text-decoration: none;
     color: #fff !important;
+}
+
+a.active {
+    color: #B026FF !important;
 }
 
 .nav-link{
