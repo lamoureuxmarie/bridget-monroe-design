@@ -1,0 +1,43 @@
+body {
+    padding-top: 120px;
+}
+
+.about {
+    padding: 120px 60px;  
+}
+
+.about .profile-pic {
+    filter: hue-rotate(-10deg);
+    height: 15rem;
+    border-radius: 50%;
+}
+
+.about .about-paragraph {
+    padding-left: 1.5rem;
+}
+
+.contact {
+    padding: 120px 60px;
+    height: 70vh;
+    background-color: #000;
+}
+
+.contact h3 {
+    color: #fff;
+    text-align: center;
+}
+
+.contact form {
+    margin: 0 auto;
+    max-width: 50rem;
+}
+
+.contact form .form-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact .form-btn{
+    display: inline-block;
+}

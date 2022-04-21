@@ -7,10 +7,6 @@ a {
     text-decoration: none !important
 }
 
-button a {
-    color: #fff !important;
-}
-
 
 body {
     overflow-x: hidden;
@@ -187,22 +183,28 @@ button {
 
 .button-primary {
     background-color: #181818;
-    color: #fff;
+    color: #fff !important;
+}
+
+.button-primary a{
+    color: #fff !important;
 }
 
 .button-primary:hover {
     background-color: #212121;
-    color: #fff;
 }
 
 .button-secondary {
     background-color: #e3e5e9;
-    color: #181818;
+    color: #181818 !important;
+}
+
+.button-secondary a{
+    color: #181818 !important;
 }
 
 .button-secondary:hover {
     background-color: #dadde1;
-    color: #181818;
 }
 
 .fade-in {

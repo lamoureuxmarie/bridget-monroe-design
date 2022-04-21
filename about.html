@@ -19,7 +19,7 @@
 
         <nav class="navbar-custom navbar navbar-expand-lg">
             <div class="container-fluid">
-              <a class="navbar-brand" href="/index.html">BRIDGET MONROE</a>
+              <a class="navbar-brand" href="/index.html"><em>Bridget Monroe</em></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -53,17 +53,49 @@
           </nav>
     </header>
 
-    <section class="about"></section>
+    <section class="about-header">
+
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="/images/bridget.png" alt="bridget monroe" class="profile-pic" />
+          </div>
+        <div class="col-md-8 about-paragraph">
+      <h3>I graduated with a <em>Diploma of Costume</em> in 2011 from <em>Ultimo TAFE</em>, in Sydney</h3>
+        <p>
+          My Diploma focused on costume for performance.
+          <br/> 
+          The core techniques developed were in pattern making, draping, advanced construction techniques, millinery and hard and soft sculpture. 
+          <br/> 
+          Alongside this we studied costume history, theory, design and management.
+          <br/> 
+          <br/> 
+          My work is mostly centered around drag, circus and burlesque but I'm always happy explore new styles and ideas.
+        </p>
+      </div>
+    </div>
+      </div>
+    </section>
 
     <section class="contact" id="contact">
+      <div class="container">
+      <h3>Contact</h3>
         <form action="https://formsubmit.co/your@email.com" method="POST">
+          <div class="form-inputs">
             <input type="text" name="_honey" style="display:none">
-            <input type="text" name="name" required>
-            <input type="email" name="email" required>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
             <input type="hidden" name="_subject" value="New request">
             <textarea name="message" placeholder="Message"></textarea>
-            <button type="submit">Send</button>
+          </div>
+          <div class="form-btn mt-3">
+            <button type="submit button-secondary">Send Message</button>
+          </div>
        </form>
+      </div>
     </section>
 
    
