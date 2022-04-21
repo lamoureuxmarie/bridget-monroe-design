@@ -1,9 +1,15 @@
-body {
-    padding-top: 120px;
-}
 
 .about {
-    padding: 120px 60px;  
+    padding-top: 120px;  
+}
+
+.about-header {
+    background-attachment: fixed;
+    width: 100%;
+    height: 25rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/images/harley-quinn.jpg);
 }
 
 .about .profile-pic {
