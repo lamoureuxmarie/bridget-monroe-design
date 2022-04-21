@@ -1,6 +1,9 @@
 
 .about {
-    padding-top: 120px;  
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3ClinearGradient id=%22linearGradientId%22 gradientTransform=%22rotate(0 0.5 0.5)%22%3E %3Cstop offset=%220%25%22 stop-color=%22%23B026FF%22 %2F%3E %3Cstop offset=%22100%25%22 stop-color=%22%23c9c9f4%22 %2F%3E %3C%2FlinearGradient%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M873.5%2C596.5Q766%2C693%2C702%2C809.5Q638%2C926%2C515%2C878.5Q392%2C831%2C324.5%2C753.5Q257%2C676%2C163.5%2C588Q70%2C500%2C105%2C369Q140%2C238%2C256%2C171.5Q372%2C105%2C483.5%2C156.5Q595%2C208%2C741%2C213.5Q887%2C219%2C934%2C359.5Q981%2C500%2C873.5%2C596.5Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22url(%23linearGradientId)%22 d=%22M873.5%2C596.5Q766%2C693%2C702%2C809.5Q638%2C926%2C515%2C878.5Q392%2C831%2C324.5%2C753.5Q257%2C676%2C163.5%2C588Q70%2C500%2C105%2C369Q140%2C238%2C256%2C171.5Q372%2C105%2C483.5%2C156.5Q595%2C208%2C741%2C213.5Q887%2C219%2C934%2C359.5Q981%2C500%2C873.5%2C596.5Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+    padding: 120px 60px;  
 }
 
 .about-header {
@@ -44,6 +47,38 @@
     justify-content: center;
 }
 
+.contact form input,
+textarea {
+    border: none;
+    margin-bottom: 1rem;
+    padding: 25px 15px;
+    background-color: #181818;
+    color: #fff;
+    box-shadow: 0 0 1px #e0b2ff;
+}
+
+.contact form input:focus,
+textarea:focus {
+    outline: none !important;
+    border: 2px solid #9b44ff;
+}
+
 .contact .form-btn{
     display: inline-block;
+}
+
+.social-media {
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: 'Libre Baskerville', serif;
+    color: #000;
+}
+
+.social-media a{
+    font-size: 2rem;
+    color: #B026FF;
+}
+
+.social-media a:hover{
+    color: #9b44ff;
 }
